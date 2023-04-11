@@ -1,1 +1,18 @@
+.flex-container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
 
+h1{
+    grid-column: 3;
+    font-family: 'Courier New', Courier, monospace;
+    color: black;
+    
+}
+
+button{
+    font-family: 'Courier New', Courier, monospace;
+    width: 8rem;
+    height: 3rem;
+}
