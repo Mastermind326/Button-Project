@@ -8,6 +8,7 @@ h1{
     grid-column: 3;
     font-family: 'Courier New', Courier, monospace;
     color: black;
+    margin-top: 3rem;
     
 }
 
@@ -15,4 +16,8 @@ button{
     font-family: 'Courier New', Courier, monospace;
     width: 8rem;
     height: 3rem;
+}
+
+p{
+    font-family: 'Courier New', Courier, monospace;
 }
