@@ -1,9 +1,22 @@
 var button = document.getElementById('button');
 
 var clicks = 0
-function countUp() {
-    clicks+=1;
-    document.getElementById("click-count").innerHTML = 'I\'ve been pressed '+clicks+ ' times!!';
-};
+function setClick() {
+    var clickStr = localStorage.getItem("clicks");
+    if(clickStr == undefined){
+        localStorage.setItem("clicks", 0);
+        clicks = 0;
+    }else{
+        clicks = parseInt(clickStr);   
+    }
+    document.getElementById("click-count").innerHTML = clicks;
+}
 
-button.addEventListener('click', countUp);
+function countUp() {
+    clicks += 1;
+    localStorage.setItem("clicks", clicks);
+    document.getElementById("click-count").innerHTML = clicks;
+}
+
+document.getElementById("button").onclick = countUp;
+setClick();
